@@ -51,14 +51,14 @@ class Ui_MainWindow(object):
         self.line_url.setAcceptDrops(True)
         self.line_url.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.line_url.setStyleSheet("border: 1px solid #edeef0;\n"
-"padding-left: 4px;\n"
-"border-radius: 4px;")
+                                    "padding-left: 4px;\n"
+                                    "border-radius: 4px;")
         self.line_url.setText("")
         self.line_url.setMaxLength(100)
         self.line_url.setFrame(True)
         self.line_url.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.line_url.setCursorPosition(0)
-        self.line_url.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.line_url.setAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.line_url.setDragEnabled(False)
         self.line_url.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
         self.line_url.setClearButtonEnabled(False)
@@ -76,9 +76,9 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.btn_check.setFont(font)
         self.btn_check.setStyleSheet("background-color: #065fd4;\n"
-"border-radius:4px;\n"
-"border-color: #065fd4;\n"
-"color: #ffffff;")
+                                     "border-radius:4px;\n"
+                                     "border-color: #065fd4;\n"
+                                     "color: #ffffff;")
         self.btn_check.setIconSize(QtCore.QSize(128, 128))
         self.btn_check.setFlat(False)
         self.btn_check.setObjectName("btn_check")
@@ -92,9 +92,9 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.btn_download.setFont(font)
         self.btn_download.setStyleSheet("background-color: #ff0000;\n"
-"border-radius:4px;\n"
-"border-color: #ff0000;\n"
-"color: #ffffff;")
+                                        "border-radius:4px;\n"
+                                        "border-color: #ff0000;\n"
+                                        "color: #ffffff;")
         self.btn_download.setIconSize(QtCore.QSize(128, 128))
         self.btn_download.setFlat(False)
         self.btn_download.setObjectName("btn_download")
@@ -115,14 +115,14 @@ class Ui_MainWindow(object):
         self.line_title.setAcceptDrops(True)
         self.line_title.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.line_title.setStyleSheet("border: 1px solid #edeef0;\n"
-"padding-left: 4px;\n"
-"border-radius: 4px;")
+                                      "padding-left: 4px;\n"
+                                      "border-radius: 4px;")
         self.line_title.setText("")
         self.line_title.setMaxLength(100)
         self.line_title.setFrame(True)
         self.line_title.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.line_title.setCursorPosition(0)
-        self.line_title.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.line_title.setAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.line_title.setDragEnabled(False)
         self.line_title.setPlaceholderText("")
         self.line_title.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
@@ -136,8 +136,8 @@ class Ui_MainWindow(object):
         self.text_desc = QtWidgets.QTextEdit(self.groupBox)
         self.text_desc.setGeometry(QtCore.QRect(260, 50, 341, 131))
         self.text_desc.setStyleSheet("border: 1px solid #edeef0;\n"
-"padding-left: 4px;\n"
-"border-radius: 4px;")
+                                     "padding-left: 4px;\n"
+                                     "border-radius: 4px;")
         self.text_desc.setPlaceholderText("")
         self.text_desc.setObjectName("text_desc")
         self.label = QtWidgets.QLabel(self.groupBox)
@@ -170,9 +170,9 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.btn_select.setFont(font)
         self.btn_select.setStyleSheet("background-color: #065fd4;\n"
-"border-radius:4px;\n"
-"border-color: #065fd4;\n"
-"color: #ffffff;")
+                                      "border-radius:4px;\n"
+                                      "border-color: #065fd4;\n"
+                                      "color: #ffffff;")
         self.btn_select.setIconSize(QtCore.QSize(128, 128))
         self.btn_select.setFlat(False)
         self.btn_select.setObjectName("btn_select")
@@ -196,14 +196,14 @@ class Ui_MainWindow(object):
         self.line_save.setAcceptDrops(True)
         self.line_save.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.line_save.setStyleSheet("border: 1px solid #edeef0;\n"
-"padding-left: 4px;\n"
-"border-radius: 4px;")
+                                     "padding-left: 4px;\n"
+                                     "border-radius: 4px;")
         self.line_save.setText("")
         self.line_save.setMaxLength(100)
         self.line_save.setFrame(True)
         self.line_save.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.line_save.setCursorPosition(0)
-        self.line_save.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.line_save.setAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.line_save.setDragEnabled(False)
         self.line_save.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
         self.line_save.setClearButtonEnabled(False)
