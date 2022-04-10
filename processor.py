@@ -7,19 +7,19 @@ from pytube import Stream
 import youtube_dl
 import os
 
-class Processor(QObject):    # Main Processor check proxy...
-    
+
+class Processor(QObject):  # Main Processor check proxy...
+
     length = QtCore.pyqtSignal(str, str, str)
     receiv = QtCore.pyqtSignal(int)
 
-    def __init__(self, title = None, url = None, path = None):    # Main Processor check proxy...
+    def __init__(self, title=None, url=None, path=None):  # Main Processor check proxy...
         super().__init__()
-        
+
         self.title = title
         self.url = url
         self.path = path
 
-                
     def running(self):
         dl = youtube_dl.YoutubeDL()
         try:
@@ -42,10 +42,13 @@ class Processor(QObject):    # Main Processor check proxy...
             print(error)
 
     def download(self):
-        dl_options = {'format': 'best', 'outtmpl': self.path + "/" + self.title + ".mp4", 'progress_hooks': [self.progress]}
+        dl_options = {'format': 'bestaudio/best',
+                      'outtmpl': self.path + "/" + self.title + ".mp4",
+                      'progress_hooks': [self.progress],
+                      #                      'no_check_certificate': True
+                      }
         with youtube_dl.YoutubeDL(dl_options) as dl:
             dl.download([self.url])
-
 
     def progress(self, percent):
         if percent['status'] == 'downloading':
@@ -54,16 +57,9 @@ class Processor(QObject):    # Main Processor check proxy...
             print(round(percent['downloaded_bytes'] / percent['total_bytes'] * 100, 1))
             self.receiv.emit(result)
 
-
-           
     def on_progress(self, stream: Stream, chunk: bytes, bytes_remaining: int) -> None:
-       
         filesize = stream.filesize
         bytes_received = filesize - bytes_remaining
         percent = round(100.0 * bytes_received / float(filesize), 1)
         self.receiv.emit(percent)
         print(bytes_received, filesize)
-
-
-   
-  
