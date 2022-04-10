@@ -1,5 +1,24 @@
 # -*- coding: utf-8 -*-
-# Tto create virtual environment run:
+# Пример взят вот отсюда:
+# https://github.com/sourcecasts/tubeles
+# Форкнул его в свой репозиторий.
+# Пока не работает (13:47 10.04.2022), проблемы с SSL сертификатом
+
+# Проблема решена следующим образом:
+# В левом верхнем углу PyCharm кликаем на слове PyCharm
+# В выпадающем меню выбираем Preferences
+# В разделе Project ИМЯ ПРОЕКТА выбираем Python Interpreter
+# Там указано, какую версию Python использует проект.
+# Входим через finder в папку размещения той версии Python, которая используется в проекте
+# Например /Applications/Python 3.9
+# Находим файл Install Certificates.command
+# Кликаем по нему два раза
+# Находим файл Update Shell Profile.command
+# Кликаем по нему два раза
+# Сертификат установлен
+
+# Пока этот пример не работает, ругается на разрешение на скачивание.
+# To create virtual environment run:
 # $virtualenv {name of virtual environment}
 # Example:
 # iMac-Alex:tubeles alex$ virtualenv venv
@@ -31,7 +50,7 @@ class ExampleApp(QtWidgets.QMainWindow, untitled.Ui_MainWindow):
         self.btn_check.clicked.connect(self.check)
         self.btn_download.clicked.connect(self.download)
 
-    def select(self):  # Select directory metod to save file...
+    def select(self):  # Select directory method to save file...
 
         self.file = QtWidgets.QFileDialog.getExistingDirectory(self, "Select file")
         if self.file != "":
